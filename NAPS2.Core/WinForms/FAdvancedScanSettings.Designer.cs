@@ -42,6 +42,8 @@ namespace NAPS2.WinForms
             this.tbImageQuality = new System.Windows.Forms.TrackBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbWiaVersion = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cbForcePageSizeCrop = new System.Windows.Forms.CheckBox();
             this.cbFlipDuplex = new System.Windows.Forms.CheckBox();
             this.cbWiaOffsetWidth = new System.Windows.Forms.CheckBox();
@@ -60,8 +62,7 @@ namespace NAPS2.WinForms
             this.btnRestoreDefaults = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbAutoDeskew = new System.Windows.Forms.CheckBox();
-            this.cmbWiaVersion = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cbTreatScanAsTwoPages = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.tbImageQuality)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -129,6 +130,18 @@ namespace NAPS2.WinForms
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // cmbWiaVersion
+            // 
+            this.cmbWiaVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWiaVersion.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbWiaVersion, "cmbWiaVersion");
+            this.cmbWiaVersion.Name = "cmbWiaVersion";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // cbForcePageSizeCrop
             // 
@@ -239,6 +252,7 @@ namespace NAPS2.WinForms
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.cbTreatScanAsTwoPages);
             this.groupBox4.Controls.Add(this.cbAutoDeskew);
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
@@ -250,17 +264,11 @@ namespace NAPS2.WinForms
             this.cbAutoDeskew.Name = "cbAutoDeskew";
             this.cbAutoDeskew.UseVisualStyleBackColor = true;
             // 
-            // cmbWiaVersion
+            // cbTreatScanAsTwoPages
             // 
-            this.cmbWiaVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWiaVersion.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbWiaVersion, "cmbWiaVersion");
-            this.cmbWiaVersion.Name = "cmbWiaVersion";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.cbTreatScanAsTwoPages, "cbTreatScanAsTwoPages");
+            this.cbTreatScanAsTwoPages.Name = "cbTreatScanAsTwoPages";
+            this.cbTreatScanAsTwoPages.UseVisualStyleBackColor = true;
             // 
             // FAdvancedScanSettings
             // 
@@ -323,5 +331,6 @@ namespace NAPS2.WinForms
         private System.Windows.Forms.CheckBox cbAutoDeskew;
         private System.Windows.Forms.ComboBox cmbWiaVersion;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox cbTreatScanAsTwoPages;
     }
 }

@@ -792,6 +792,36 @@
   <data name="&gt;&gt;btnRestoreDefaults.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="cbTreatScanAsTwoPages.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbTreatScanAsTwoPages.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbTreatScanAsTwoPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 18</value>
+  </data>
+  <data name="cbTreatScanAsTwoPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 17</value>
+  </data>
+  <data name="cbTreatScanAsTwoPages.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="cbTreatScanAsTwoPages.Text" xml:space="preserve">
+    <value>Treat scan as two pages</value>
+  </data>
+  <data name="&gt;&gt;cbTreatScanAsTwoPages.Name" xml:space="preserve">
+    <value>cbTreatScanAsTwoPages</value>
+  </data>
+  <data name="&gt;&gt;cbTreatScanAsTwoPages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbTreatScanAsTwoPages.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;cbTreatScanAsTwoPages.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="cbAutoDeskew.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -820,7 +850,7 @@
     <value>groupBox4</value>
   </data>
   <data name="&gt;&gt;cbAutoDeskew.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 248</value>
@@ -892,12 +922,12 @@
     <value>ilProfileIcons</value>
   </data>
   <data name="&gt;&gt;ilProfileIcons.Type" xml:space="preserve">
-    <value>NAPS2.WinForms.ILProfileIcons, NAPS2.Core, Version=6.0.3.32183, Culture=neutral, PublicKeyToken=null</value>
+    <value>NAPS2.WinForms.ILProfileIcons, NAPS2.Core, Version=6.1.2.35748, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FAdvancedScanSettings</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>NAPS2.WinForms.FormBase, NAPS2.Core, Version=6.0.3.32183, Culture=neutral, PublicKeyToken=null</value>
+    <value>NAPS2.WinForms.FormBase, NAPS2.Core, Version=6.1.2.35748, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

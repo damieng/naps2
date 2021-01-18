@@ -142,17 +142,40 @@ namespace NAPS2.Scan.Wia
 
         private void ProduceImage(ScannedImageSource.Concrete source, Image output, ref int pageNumber)
         {
-            using (var result = scannedImageHelper.PostProcessStep1(output, ScanProfile))
+            var results = new[] { scannedImageHelper.PostProcessStep1(output, ScanProfile) };
+
+            if (ScanProfile.TreatScanAsTwoPages)
+            {
+                var result = results[0];
+
+                // Should probably detect portrait vs landscape and split appropriately but this is the
+                // main use case.
+                var halfHeight = result.Height / 2;
+                var firstRect = new Rectangle(0, 0, result.Width, halfHeight);
+                var secondRect = new Rectangle(0, halfHeight, result.Width, halfHeight);
+
+                var firstPage = result.Clone(secondRect, result.PixelFormat);
+                firstPage.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                var secondPage = result.Clone(firstRect, result.PixelFormat);
+                secondPage.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+                results = new[] { firstPage, secondPage };
+
+                result.Dispose();
+            }
+
+            foreach (var result in results)
             {
                 if (blankDetector.ExcludePage(result, ScanProfile))
                 {
-                    return;
+                    continue;
                 }
 
                 ScanBitDepth bitDepth = ScanProfile.UseNativeUI ? ScanBitDepth.C24Bit : ScanProfile.BitDepth;
                 var image = new ScannedImage(result, bitDepth, ScanProfile.MaxQuality, ScanProfile.Quality);
                 scannedImageHelper.PostProcessStep2(image, result, ScanProfile, ScanParams, pageNumber);
                 string tempPath = scannedImageHelper.SaveForBackgroundOcr(result, ScanParams);
+                result.Dispose();
                 scannedImageHelper.RunBackgroundOcr(image, ScanParams, tempPath);
                 source.Put(image);
 

@@ -34,7 +34,7 @@ namespace NAPS2.Scan
 
         public ScanProfile Clone()
         {
-            var profile = (ScanProfile) MemberwiseClone();
+            var profile = (ScanProfile)MemberwiseClone();
             if (profile.AutoSaveSettings != null)
             {
                 profile.AutoSaveSettings = AutoSaveSettings.Clone();
@@ -125,6 +125,8 @@ namespace NAPS2.Scan
         public bool FlipDuplexedPages { get; set; }
 
         public KeyValueScanOptions KeyValueOptions { get; set; }
+
+        public bool TreatScanAsTwoPages { get; set; }
     }
 
     [Serializable]
@@ -148,7 +150,7 @@ namespace NAPS2.Scan
             Separator = SaveSeparator.FilePerPage;
         }
 
-        internal AutoSaveSettings Clone() => (AutoSaveSettings) MemberwiseClone();
+        internal AutoSaveSettings Clone() => (AutoSaveSettings)MemberwiseClone();
 
         public string FilePath { get; set; }
 

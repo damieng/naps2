@@ -310,6 +310,7 @@ namespace NAPS2.WinForms
                 Quality = ScanProfile.Quality,
                 BrightnessContrastAfterScan = ScanProfile.BrightnessContrastAfterScan,
                 AutoDeskew = ScanProfile.AutoDeskew,
+                TreatScanAsTwoPages = ScanProfile.TreatScanAsTwoPages,
                 WiaOffsetWidth = ScanProfile.WiaOffsetWidth,
                 WiaRetryOnFailure = ScanProfile.WiaRetryOnFailure,
                 WiaDelayBetweenScans = ScanProfile.WiaDelayBetweenScans,
