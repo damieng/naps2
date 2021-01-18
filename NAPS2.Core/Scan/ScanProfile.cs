@@ -90,6 +90,8 @@ namespace NAPS2.Scan
 
         public bool EnableAutoSave { get; set; }
 
+        public bool RunInBackground { get; set; }
+
         public AutoSaveSettings AutoSaveSettings { get; set; }
 
         public int Quality { get; set; }

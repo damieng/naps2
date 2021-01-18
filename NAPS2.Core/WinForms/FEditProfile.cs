@@ -87,6 +87,7 @@ namespace NAPS2.WinForms
             cmbAlign.SelectedIndex = (int)ScanProfile.PageAlign;
 
             cbAutoSave.Checked = ScanProfile.EnableAutoSave;
+            cbRunInBackground.Checked = ScanProfile.RunInBackground;
 
             // The setter updates the driver selection checkboxes
             DeviceDriverName = useProxy ? ScanProfile.ProxyDriverName : ScanProfile.DriverName;
@@ -304,6 +305,7 @@ namespace NAPS2.WinForms
                 PaperSource = (ScanSource)cmbSource.SelectedIndex,
 
                 EnableAutoSave = cbAutoSave.Checked,
+                RunInBackground = cbRunInBackground.Checked,
                 AutoSaveSettings = ScanProfile.AutoSaveSettings,
                 Quality = ScanProfile.Quality,
                 BrightnessContrastAfterScan = ScanProfile.BrightnessContrastAfterScan,

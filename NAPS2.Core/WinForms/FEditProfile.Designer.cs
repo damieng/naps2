@@ -72,6 +72,7 @@ namespace NAPS2.WinForms
             this.linkAutoSaveSettings = new System.Windows.Forms.LinkLabel();
             this.btnAdvanced = new System.Windows.Forms.Button();
             this.btnNetwork = new System.Windows.Forms.Button();
+            this.cbRunInBackground = new System.Windows.Forms.CheckBox();
             this.panelUI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trBrightness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trContrast)).BeginInit();
@@ -325,11 +326,18 @@ namespace NAPS2.WinForms
             this.btnNetwork.UseVisualStyleBackColor = true;
             this.btnNetwork.Click += new System.EventHandler(this.btnNetwork_Click);
             // 
+            // cbRunInBackground
+            // 
+            resources.ApplyResources(this.cbRunInBackground, "cbRunInBackground");
+            this.cbRunInBackground.Name = "cbRunInBackground";
+            this.cbRunInBackground.UseVisualStyleBackColor = true;
+            // 
             // FEditProfile
             // 
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbRunInBackground);
             this.Controls.Add(this.btnNetwork);
             this.Controls.Add(this.btnAdvanced);
             this.Controls.Add(this.linkAutoSaveSettings);
@@ -415,5 +423,6 @@ namespace NAPS2.WinForms
         private System.Windows.Forms.Button btnAdvanced;
         private System.Windows.Forms.RadioButton rdSANE;
         private System.Windows.Forms.Button btnNetwork;
+        private System.Windows.Forms.CheckBox cbRunInBackground;
     }
 }
