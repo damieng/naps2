@@ -126,7 +126,7 @@ namespace NAPS2.Scan
 
         public KeyValueScanOptions KeyValueOptions { get; set; }
 
-        public bool TreatScanAsTwoPages { get; set; }
+        public bool DivideScanIntoTwoPages { get; set; }
     }
 
     [Serializable]
