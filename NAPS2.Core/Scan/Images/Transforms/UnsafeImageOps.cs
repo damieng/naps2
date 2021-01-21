@@ -32,21 +32,21 @@ namespace NAPS2.Scan.Images.Transforms
                     for (int x = 0; x < w; x++)
                     {
                         byte* pixel = row + x * bytesPerPixel;
-                        byte r = *pixel;
+                        byte b = *pixel;
                         byte g = *(pixel + 1);
-                        byte b = *(pixel + 2);
+                        byte r = *(pixel + 2);
 
-                        int r2 = (int)(r + brightnessAdjusted);
-                        int g2 = (int)(g + brightnessAdjusted);
                         int b2 = (int)(b + brightnessAdjusted);
+                        int g2 = (int)(g + brightnessAdjusted);
+                        int r2 = (int)(r + brightnessAdjusted);
 
-                        r = (byte)(r2 < 0 ? 0 : r2 > 255 ? 255 : r2);
-                        g = (byte)(g2 < 0 ? 0 : g2 > 255 ? 255 : g2);
                         b = (byte)(b2 < 0 ? 0 : b2 > 255 ? 255 : b2);
+                        g = (byte)(g2 < 0 ? 0 : g2 > 255 ? 255 : g2);
+                        r = (byte)(r2 < 0 ? 0 : r2 > 255 ? 255 : r2);
 
-                        *pixel = r;
+                        *pixel = b;
                         *(pixel + 1) = g;
-                        *(pixel + 2) = b;
+                        *(pixel + 2) = r;
                     }
                 }
             });
@@ -74,21 +74,21 @@ namespace NAPS2.Scan.Images.Transforms
                     for (int x = 0; x < w; x++)
                     {
                         byte* pixel = row + x * bytesPerPixel;
-                        byte r = *pixel;
+                        byte b = *pixel;
                         byte g = *(pixel + 1);
-                        byte b = *(pixel + 2);
+                        byte r = *(pixel + 2);
 
-                        int r2 = (int)(r * contrastAdjusted + offset);
-                        int g2 = (int)(g * contrastAdjusted + offset);
                         int b2 = (int)(b * contrastAdjusted + offset);
+                        int g2 = (int)(g * contrastAdjusted + offset);
+                        int r2 = (int)(r * contrastAdjusted + offset);
 
-                        r = (byte)(r2 < 0 ? 0 : r2 > 255 ? 255 : r2);
-                        g = (byte)(g2 < 0 ? 0 : g2 > 255 ? 255 : g2);
                         b = (byte)(b2 < 0 ? 0 : b2 > 255 ? 255 : b2);
+                        g = (byte)(g2 < 0 ? 0 : g2 > 255 ? 255 : g2);
+                        r = (byte)(r2 < 0 ? 0 : r2 > 255 ? 255 : r2);
 
-                        *pixel = r;
+                        *pixel = b;
                         *(pixel + 1) = g;
-                        *(pixel + 2) = b;
+                        *(pixel + 2) = r;
                     }
                 }
             });
@@ -116,9 +116,9 @@ namespace NAPS2.Scan.Images.Transforms
                     for (int x = 0; x < w; x++)
                     {
                         byte* pixel = row + x * bytesPerPixel;
-                        byte r = *pixel;
+                        byte b = *pixel;
                         byte g = *(pixel + 1);
-                        byte b = *(pixel + 2);
+                        byte r = *(pixel + 2);
 
                         int max = Math.Max(r, Math.Max(g, b));
                         int min = Math.Min(r, Math.Min(g, b));
@@ -193,9 +193,9 @@ namespace NAPS2.Scan.Images.Transforms
                             b = q;
                         }
 
-                        *pixel = r;
+                        *pixel = b;
                         *(pixel + 1) = g;
-                        *(pixel + 2) = b;
+                        *(pixel + 2) = r;
                     }
                 }
             });
@@ -335,9 +335,9 @@ namespace NAPS2.Scan.Images.Transforms
                             if (x + k < w)
                             {
                                 byte* pixel = row + (x + k) * bytesPerPixel;
-                                byte r = *pixel;
+                                byte b = *pixel;
                                 byte g = *(pixel + 1);
-                                byte b = *(pixel + 2);
+                                byte r = *(pixel + 2);
                                 // Use standard values for grayscale conversion to weight the RGB values
                                 int luma = r * 299 + g * 587 + b * 114;
                                 if (luma >= thresholdAdjusted)
@@ -408,9 +408,9 @@ namespace NAPS2.Scan.Images.Transforms
                         for (int x = 0; x < w; x++)
                         {
                             byte* pixel = row + x * bytesPerPixel;
-                            byte r = *pixel;
+                            byte b = *pixel;
                             byte g = *(pixel + 1);
-                            byte b = *(pixel + 2);
+                            byte r = *(pixel + 2);
                             // Use standard values for grayscale conversion to weight the RGB values
                             int luma = r * 299 + g * 587 + b * 114;
                             outRow[x] = luma < thresholdAdjusted;
