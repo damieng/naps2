@@ -90,6 +90,8 @@ namespace NAPS2.WinForms
             Size = new Size(600, 600);
 
             var maxDimen = Screen.AllScreens.Max(s => Math.Max(s.WorkingArea.Height, s.WorkingArea.Width));
+            if (scannedImageRenderer == null) return;
+
             workingImage = await scannedImageRenderer.Render(Image, maxDimen * 2);
             if (closed)
             {
