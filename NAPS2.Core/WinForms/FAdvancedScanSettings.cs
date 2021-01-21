@@ -46,7 +46,7 @@ namespace NAPS2.WinForms
             txtImageQuality.Text = scanProfile.Quality.ToString("G");
             cbBrightnessContrastAfterScan.Checked = scanProfile.BrightnessContrastAfterScan;
             cbAutoDeskew.Checked = scanProfile.AutoDeskew;
-            cbTreatScanAsTwoPages.Checked = scanProfile.TreatScanAsTwoPages;
+            cboDivideScanIntoTwoPages.Checked = scanProfile.DivideScanIntoTwoPages;
             cbWiaOffsetWidth.Checked = scanProfile.WiaOffsetWidth;
             cmbWiaVersion.SelectedIndex = (int)scanProfile.WiaVersion;
             cbForcePageSize.Checked = scanProfile.ForcePageSize;
@@ -81,7 +81,7 @@ namespace NAPS2.WinForms
             ScanProfile.MaxQuality = cbHighQuality.Checked;
             ScanProfile.BrightnessContrastAfterScan = cbBrightnessContrastAfterScan.Checked;
             ScanProfile.AutoDeskew = cbAutoDeskew.Checked;
-            ScanProfile.TreatScanAsTwoPages = cbTreatScanAsTwoPages.Checked;
+            ScanProfile.DivideScanIntoTwoPages = cboDivideScanIntoTwoPages.Checked;
             ScanProfile.WiaOffsetWidth = cbWiaOffsetWidth.Checked;
             if (cmbWiaVersion.SelectedIndex != -1)
             {

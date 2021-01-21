@@ -144,7 +144,7 @@ namespace NAPS2.Scan.Wia
         {
             var results = new[] { scannedImageHelper.PostProcessStep1(output, ScanProfile) };
 
-            if (ScanProfile.TreatScanAsTwoPages)
+            if (ScanProfile.DivideScanIntoTwoPages)
             {
                 var result = results[0];
 

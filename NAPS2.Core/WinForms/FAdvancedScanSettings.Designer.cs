@@ -61,8 +61,8 @@ namespace NAPS2.WinForms
             this.cbExcludeBlankPages = new System.Windows.Forms.CheckBox();
             this.btnRestoreDefaults = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cboDivideScanIntoTwoPages = new System.Windows.Forms.CheckBox();
             this.cbAutoDeskew = new System.Windows.Forms.CheckBox();
-            this.cbTreatScanAsTwoPages = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.tbImageQuality)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -252,23 +252,23 @@ namespace NAPS2.WinForms
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbTreatScanAsTwoPages);
+            this.groupBox4.Controls.Add(this.cboDivideScanIntoTwoPages);
             this.groupBox4.Controls.Add(this.cbAutoDeskew);
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
+            // 
+            // cboDivideScanIntoTwoPages
+            // 
+            resources.ApplyResources(this.cboDivideScanIntoTwoPages, "cboDivideScanIntoTwoPages");
+            this.cboDivideScanIntoTwoPages.Name = "cboDivideScanIntoTwoPages";
+            this.cboDivideScanIntoTwoPages.UseVisualStyleBackColor = true;
             // 
             // cbAutoDeskew
             // 
             resources.ApplyResources(this.cbAutoDeskew, "cbAutoDeskew");
             this.cbAutoDeskew.Name = "cbAutoDeskew";
             this.cbAutoDeskew.UseVisualStyleBackColor = true;
-            // 
-            // cbTreatScanAsTwoPages
-            // 
-            resources.ApplyResources(this.cbTreatScanAsTwoPages, "cbTreatScanAsTwoPages");
-            this.cbTreatScanAsTwoPages.Name = "cbTreatScanAsTwoPages";
-            this.cbTreatScanAsTwoPages.UseVisualStyleBackColor = true;
             // 
             // FAdvancedScanSettings
             // 
@@ -331,6 +331,6 @@ namespace NAPS2.WinForms
         private System.Windows.Forms.CheckBox cbAutoDeskew;
         private System.Windows.Forms.ComboBox cmbWiaVersion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox cbTreatScanAsTwoPages;
+        private System.Windows.Forms.CheckBox cboDivideScanIntoTwoPages;
     }
 }
