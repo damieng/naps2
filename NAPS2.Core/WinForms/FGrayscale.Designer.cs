@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace NAPS2.WinForms
 {
-    partial class FGreyscale
+    partial class FGrayscale
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace NAPS2.WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGreyscale));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGrayscale));
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.pbRed = new System.Windows.Forms.PictureBox();
             this.txtRed = new System.Windows.Forms.TextBox();
@@ -74,8 +74,7 @@ namespace NAPS2.WinForms
             // tbRed
             // 
             resources.ApplyResources(this.tbRed, "tbRed");
-            this.tbRed.Maximum = 1000;
-            this.tbRed.Minimum = -1000;
+            this.tbRed.Maximum = 2000;
             this.tbRed.Name = "tbRed";
             this.tbRed.TickFrequency = 200;
             this.tbRed.Scroll += new System.EventHandler(this.tbRed_Scroll);
@@ -89,8 +88,7 @@ namespace NAPS2.WinForms
             // tbGreen
             // 
             resources.ApplyResources(this.tbGreen, "tbGreen");
-            this.tbGreen.Maximum = 1000;
-            this.tbGreen.Minimum = -1000;
+            this.tbGreen.Maximum = 2000;
             this.tbGreen.Name = "tbGreen";
             this.tbGreen.TickFrequency = 200;
             this.tbGreen.Scroll += new System.EventHandler(this.tbGreen_Scroll);
@@ -111,8 +109,7 @@ namespace NAPS2.WinForms
             // tbBlue
             // 
             resources.ApplyResources(this.tbBlue, "tbBlue");
-            this.tbBlue.Maximum = 1000;
-            this.tbBlue.Minimum = -1000;
+            this.tbBlue.Maximum = 2000;
             this.tbBlue.Name = "tbBlue";
             this.tbBlue.TickFrequency = 200;
             this.tbBlue.Scroll += new System.EventHandler(this.tbBlue_Scroll);
@@ -124,7 +121,7 @@ namespace NAPS2.WinForms
             this.pbGreen.Name = "pbGreen";
             this.pbGreen.TabStop = false;
             // 
-            // FGreyscale
+            // FGrayscale
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,7 +135,7 @@ namespace NAPS2.WinForms
             this.Controls.Add(this.txtRed);
             this.Controls.Add(this.tbRed);
             this.Controls.Add(this.pictureBox);
-            this.Name = "FGreyscale";
+            this.Name = "FGrayscale";
             this.Controls.SetChildIndex(this.pictureBox, 0);
             this.Controls.SetChildIndex(this.tbRed, 0);
             this.Controls.SetChildIndex(this.txtRed, 0);

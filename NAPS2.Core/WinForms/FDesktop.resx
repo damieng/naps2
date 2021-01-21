@@ -244,7 +244,7 @@
     <value>thumbnailList1</value>
   </data>
   <data name="&gt;&gt;thumbnailList1.Type" xml:space="preserve">
-    <value>NAPS2.WinForms.ThumbnailList, NAPS2.Core, Version=6.1.2.29156, Culture=neutral, PublicKeyToken=null</value>
+    <value>NAPS2.WinForms.ThumbnailList, NAPS2.Core, Version=6.1.2.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;thumbnailList1.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -493,14 +493,14 @@
   <data name="tsBlackWhite.Text" xml:space="preserve">
     <value>Black and &amp;White</value>
   </data>
-  <data name="tsGreyscale.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="tsGrayscale.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="tsGreyscale.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsGrayscale.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 22</value>
   </data>
-  <data name="tsGreyscale.Text" xml:space="preserve">
-    <value>&amp;Greyscale</value>
+  <data name="tsGrayscale.Text" xml:space="preserve">
+    <value>&amp;Grayscale</value>
   </data>
   <data name="tsSharpen.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
@@ -1202,10 +1202,10 @@
   <data name="&gt;&gt;tsBlackWhite.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsGreyscale.Name" xml:space="preserve">
-    <value>tsGreyscale</value>
+  <data name="&gt;&gt;tsGrayscale.Name" xml:space="preserve">
+    <value>tsGrayscale</value>
   </data>
-  <data name="&gt;&gt;tsGreyscale.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsGrayscale.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsSharpen.Name" xml:space="preserve">
@@ -1266,7 +1266,7 @@
     <value>tsMove</value>
   </data>
   <data name="&gt;&gt;tsMove.Type" xml:space="preserve">
-    <value>NAPS2.WinForms.ToolStripDoubleButton, NAPS2.Core, Version=6.1.2.29156, Culture=neutral, PublicKeyToken=null</value>
+    <value>NAPS2.WinForms.ToolStripDoubleButton, NAPS2.Core, Version=6.1.2.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tsdReorder.Name" xml:space="preserve">
     <value>tsdReorder</value>
@@ -1368,6 +1368,6 @@
     <value>FDesktop</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>NAPS2.WinForms.FormBase, NAPS2.Core, Version=6.1.2.29156, Culture=neutral, PublicKeyToken=null</value>
+    <value>NAPS2.WinForms.FormBase, NAPS2.Core, Version=6.1.2.35446, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

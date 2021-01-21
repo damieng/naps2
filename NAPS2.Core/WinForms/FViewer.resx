@@ -148,7 +148,7 @@
     <value>tiffViewer1</value>
   </data>
   <data name="&gt;&gt;tiffViewer1.Type" xml:space="preserve">
-    <value>NAPS2.WinForms.TiffViewerCtl, NAPS2.Core, Version=6.1.2.17624, Culture=neutral, PublicKeyToken=null</value>
+    <value>NAPS2.WinForms.TiffViewerCtl, NAPS2.Core, Version=6.1.2.36171, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tiffViewer1.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -291,14 +291,14 @@
   <data name="tsBlackWhite.Text" xml:space="preserve">
     <value>Black and White</value>
   </data>
-  <data name="tsGreyscale.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tsGrayscale.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="tsGreyscale.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tsGrayscale.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="tsGreyscale.Text" xml:space="preserve">
-    <value>Greyscale</value>
+  <data name="tsGrayscale.Text" xml:space="preserve">
+    <value>Grayscale</value>
   </data>
   <data name="tsSharpen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -546,6 +546,12 @@
   <data name="&gt;&gt;tsBlackWhite.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tsGrayscale.Name" xml:space="preserve">
+    <value>tsGrayscale</value>
+  </data>
+  <data name="&gt;&gt;tsGrayscale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;tsSharpen.Name" xml:space="preserve">
     <value>tsSharpen</value>
   </data>
@@ -582,16 +588,10 @@
   <data name="&gt;&gt;tsDelete.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsGreyscale.Name" xml:space="preserve">
-    <value>tsGreyscale</value>
-  </data>
-  <data name="&gt;&gt;tsGreyscale.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FViewer</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>NAPS2.WinForms.FormBase, NAPS2.Core, Version=6.1.2.17624, Culture=neutral, PublicKeyToken=null</value>
+    <value>NAPS2.WinForms.FormBase, NAPS2.Core, Version=6.1.2.36171, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

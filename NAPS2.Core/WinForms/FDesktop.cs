@@ -1513,11 +1513,11 @@ namespace NAPS2.WinForms
         }
 
 
-        private void tsGreyscale_Click(object sender, EventArgs e)
+        private void tsGrayscale_Click(object sender, EventArgs e)
         {
             if (SelectedIndices.Any())
             {
-                var form = FormFactory.Create<FGreyscale>();
+                var form = FormFactory.Create<FGrayscale>();
                 form.Image = SelectedImages.First();
                 form.SelectedImages = SelectedImages.ToList();
                 form.ShowDialog();

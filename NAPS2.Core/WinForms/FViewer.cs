@@ -49,7 +49,7 @@ namespace NAPS2.WinForms
         private readonly ScannedImageRenderer scannedImageRenderer;
         private readonly KeyboardShortcutManager ksm;
         private readonly IUserConfigManager userConfigManager;
-        private ToolStripButton tsGreyscale;
+        private ToolStripButton tsGrayscale;
         private readonly IOperationProgress operationProgress;
 
         public FViewer(ChangeTracker changeTracker, IOperationFactory operationFactory, WinFormsExportHelper exportHelper, AppConfigManager appConfigManager, ScannedImageRenderer scannedImageRenderer, KeyboardShortcutManager ksm, IUserConfigManager userConfigManager, IOperationProgress operationProgress)
@@ -154,13 +154,13 @@ namespace NAPS2.WinForms
             this.tsBrightnessContrast = new System.Windows.Forms.ToolStripButton();
             this.tsHueSaturation = new System.Windows.Forms.ToolStripButton();
             this.tsBlackWhite = new System.Windows.Forms.ToolStripButton();
+            this.tsGrayscale = new System.Windows.Forms.ToolStripButton();
             this.tsSharpen = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSavePDF = new System.Windows.Forms.ToolStripButton();
             this.tsSaveImage = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsDelete = new System.Windows.Forms.ToolStripButton();
-            this.tsGreyscale = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -202,7 +202,7 @@ namespace NAPS2.WinForms
             this.tsBrightnessContrast,
             this.tsHueSaturation,
             this.tsBlackWhite,
-            this.tsGreyscale,
+            this.tsGrayscale,
             this.tsSharpen,
             this.toolStripSeparator3,
             this.tsSavePDF,
@@ -323,6 +323,14 @@ namespace NAPS2.WinForms
             this.tsBlackWhite.Name = "tsBlackWhite";
             this.tsBlackWhite.Click += new System.EventHandler(this.tsBlackWhite_Click);
             // 
+            // tsGrayscale
+            // 
+            this.tsGrayscale.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsGrayscale.Image = global::NAPS2.Icons.color_gradient;
+            resources.ApplyResources(this.tsGrayscale, "tsGrayscale");
+            this.tsGrayscale.Name = "tsGrayscale";
+            this.tsGrayscale.Click += new System.EventHandler(this.tsGrayscale_Click);
+            // 
             // tsSharpen
             // 
             this.tsSharpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -364,14 +372,6 @@ namespace NAPS2.WinForms
             resources.ApplyResources(this.tsDelete, "tsDelete");
             this.tsDelete.Name = "tsDelete";
             this.tsDelete.Click += new System.EventHandler(this.tsDelete_Click);
-            // 
-            // tsGreyscale
-            // 
-            this.tsGreyscale.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsGreyscale.Image = global::NAPS2.Icons.contrast;
-            resources.ApplyResources(this.tsGreyscale, "tsGreyscale");
-            this.tsGreyscale.Name = "tsGreyscale";
-            this.tsGreyscale.Click += new System.EventHandler(this.tsGreyscale_Click);
             // 
             // FViewer
             // 
@@ -477,10 +477,9 @@ namespace NAPS2.WinForms
             await UpdateImage();
         }
 
-
-        private async void tsGreyscale_Click(object sender, EventArgs e)
+        private async void tsGrayscale_Click(object sender, EventArgs e)
         {
-            var form = FormFactory.Create<FGreyscale>();
+            var form = FormFactory.Create<FGrayscale>();
             form.Image = ImageList.Images[ImageIndex];
             form.ShowDialog();
             await UpdateImage();
@@ -614,7 +613,7 @@ namespace NAPS2.WinForms
 
             ksm.Assign(ks.Delete, tsDelete);
             ksm.Assign(ks.ImageBlackWhite, tsBlackWhite);
-            ksm.Assign(ks.ImageGrayscale, tsGreyscale);
+            ksm.Assign(ks.ImageGrayscale, tsGrayscale);
             ksm.Assign(ks.ImageBrightness, tsBrightnessContrast);
             ksm.Assign(ks.ImageContrast, tsBrightnessContrast);
             ksm.Assign(ks.ImageCrop, tsCrop);
