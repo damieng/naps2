@@ -229,7 +229,7 @@ namespace NAPS2.Scan.Images.Transforms
                     {
                         byte* srcRow = (byte*)(srcData.Scan0 + srcStride * (y1 + y) + (x1 + 7) / 8);
                         byte* dstRow = (byte*)(dstData.Scan0 + dstStride * y);
-                        
+
                         for (int x = 0; x < bytesExceptLast; x++)
                         {
                             byte* srcPtr = srcRow + x;
@@ -356,6 +356,54 @@ namespace NAPS2.Scan.Images.Transforms
             monoBitmap.SafeSetResolution(bitmap.HorizontalResolution, bitmap.VerticalResolution);
 
             return monoBitmap;
+        }
+
+        public static unsafe Bitmap ConvertToGrayscale(Bitmap bitmap, float redWeight = 0.3f, float greenWeight = 0.59f, float blueWeight = 0.11f)
+        {
+            int bytesPerPixel = GetBytesPerPixel(bitmap);
+
+            var bitmapData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadOnly, bitmap.PixelFormat);
+            var stride = Math.Abs(bitmapData.Stride);
+            byte* data = (byte*)bitmapData.Scan0;
+            int h = bitmapData.Height;
+            int w = bitmapData.Width;
+
+            var grayBitmap = new Bitmap(bitmap.Width, bitmap.Height, bitmap.PixelFormat);
+            var grayBitmapData = grayBitmap.LockBits(new Rectangle(0, 0, grayBitmap.Width, grayBitmap.Height), ImageLockMode.WriteOnly, grayBitmap.PixelFormat);
+            var graystride = Math.Abs(grayBitmapData.Stride);
+            byte* grayData = (byte*)grayBitmapData.Scan0;
+            int targetBytesPerPixel = GetBytesPerPixel(grayBitmap);
+
+            PartitionRows(h, (start, end) =>
+            {
+                for (int y = start; y < end; y++)
+                {
+                    byte* row = data + stride * y;
+                    int offset = y * graystride;
+                    for (int x = 0; x < w; x++)
+                    {
+                        byte* pixel = row + x * bytesPerPixel;
+                        byte b = *pixel;
+                        byte g = *(pixel + 1);
+                        byte r = *(pixel + 2);
+
+                        int value = (int)((r * redWeight) + (g * greenWeight) + (b * blueWeight));
+                        byte gray =  value < 0 ? 0 : value > 255 ? 255 : (byte)value;
+
+                        *(grayData + offset) = gray;
+                        *(grayData + offset + 1) = gray;
+                        *(grayData + offset + 2) = gray;
+
+                        offset += targetBytesPerPixel;
+                    }
+                }
+            });
+
+            bitmap.UnlockBits(bitmapData);
+            grayBitmap.UnlockBits(grayBitmapData);
+            grayBitmap.SafeSetResolution(bitmap.HorizontalResolution, bitmap.VerticalResolution);
+
+            return grayBitmap;
         }
 
         public static unsafe BitArray[] ConvertToBitArrays(Bitmap bitmap)

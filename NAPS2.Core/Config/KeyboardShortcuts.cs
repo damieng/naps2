@@ -44,6 +44,7 @@ namespace NAPS2.Config
 
         public string ImageView { get; set; }
         public string ImageBlackWhite { get; set; }
+        public string ImageGrayscale { get; set; }
         public string ImageBrightness { get; set; }
         public string ImageContrast { get; set; }
         public string ImageCrop { get; set; }
