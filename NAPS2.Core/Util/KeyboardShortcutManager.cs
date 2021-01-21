@@ -98,7 +98,7 @@ namespace NAPS2.Util
             if (Assign(value, item.PerformClick))
             {
                 item.AutoToolTip = true;
-                item.ToolTipText = value;
+                item.ToolTipText += " (" + value + ")";
                 return true;
             }
             return false;
