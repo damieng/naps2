@@ -7,9 +7,9 @@ using NAPS2.Util;
 
 namespace NAPS2.WinForms
 {
-    partial class FGreyscale : ImageForm
+    partial class FGrayscale : ImageForm
     {
-        public FGreyscale(ChangeTracker changeTracker, ScannedImageRenderer scannedImageRenderer)
+        public FGrayscale(ChangeTracker changeTracker, ScannedImageRenderer scannedImageRenderer)
             : base(changeTracker, scannedImageRenderer)
         {
             InitializeComponent();
@@ -17,51 +17,54 @@ namespace NAPS2.WinForms
             ResetTransform();
         }
 
-        public GrayscaleTransform GreyscaleTransform { get; private set; }
+        public GrayscaleTransform GrayscaleTransform { get; private set; }
 
-        protected override IEnumerable<Transform> Transforms => new[] { GreyscaleTransform };
+        protected override IEnumerable<Transform> Transforms => new[] { GrayscaleTransform };
 
         protected override PictureBox PictureBox => pictureBox;
 
         protected override void ResetTransform()
         {
-            GreyscaleTransform = new GrayscaleTransform();
+            GrayscaleTransform = new GrayscaleTransform();
 
-            var red = GreyscaleTransform.RedWeighting;
-            var green = GreyscaleTransform.GreenWeighting;
-            var blue = GreyscaleTransform.BlueWeighting;
+            var red = GrayscaleTransform.RedWeighting;
+            var green = GrayscaleTransform.GreenWeighting;
+            var blue = GrayscaleTransform.BlueWeighting;
 
-            tbRed.Value = (int)(red * 1000);
+            tbRed.Value = red;
             txtRed.Text = tbRed.Value.ToString();
 
-            tbGreen.Value = (int)(green * 1000);
+            tbGreen.Value = green;
             txtGreen.Text = tbGreen.Value.ToString();
 
-            tbBlue.Value = (int)(blue * 1000);
+            tbBlue.Value = blue;
             txtBlue.Text = tbBlue.Value.ToString();
         }
 
         private void UpdateTransform()
         {
-            GreyscaleTransform.RedWeighting = tbRed.Value / 1000f;
-            GreyscaleTransform.GreenWeighting = tbGreen.Value / 1000f;
-            GreyscaleTransform.BlueWeighting = tbBlue.Value / 1000f;
+            GrayscaleTransform.RedWeighting = tbRed.Value;
+            GrayscaleTransform.GreenWeighting = tbGreen.Value;
+            GrayscaleTransform.BlueWeighting = tbBlue.Value;
             UpdatePreviewBox();
         }
 
         private void tbRed_Scroll(object sender, EventArgs e)
         {
             txtRed.Text = tbRed.Value.ToString("G");
+            UpdateTransform();
         }
 
         private void tbGreen_Scroll(object sender, EventArgs e)
         {
             txtGreen.Text = tbGreen.Value.ToString("G");
+            UpdateTransform();
         }
 
         private void tbBlue_Scroll(object sender, EventArgs e)
         {
             txtBlue.Text = tbBlue.Value.ToString("G");
+            UpdateTransform();
         }
 
         private void txtRed_TextChanged(object sender, EventArgs e)

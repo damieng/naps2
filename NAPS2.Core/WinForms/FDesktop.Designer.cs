@@ -501,12 +501,12 @@ namespace NAPS2.WinForms
             this.tsBlackWhite.Name = "tsBlackWhite";
             this.tsBlackWhite.Click += new System.EventHandler(this.tsBlackWhite_Click);
             // 
-            // tsGreyscale
+            // tsGrayscale
             // 
-            this.tsGrayscale.Image = global::NAPS2.Icons.contrast;
-            resources.ApplyResources(this.tsGrayscale, "tsGreyscale");
-            this.tsGrayscale.Name = "tsGreyscale";
-            this.tsGrayscale.Click += new System.EventHandler(this.tsGreyscale_Click);
+            this.tsGrayscale.Image = global::NAPS2.Icons.color_gradient;
+            resources.ApplyResources(this.tsGrayscale, "tsGrayscale");
+            this.tsGrayscale.Name = "tsGrayscale";
+            this.tsGrayscale.Click += new System.EventHandler(this.tsGrayscale_Click);
             // 
             // tsSharpen
             // 

@@ -247,11 +247,11 @@
     <Compile Include="Util\WebClientExtensions.cs" />
     <Compile Include="Util\Win32Window.cs" />
     <Compile Include="Logging\WindowsEventLogger.cs" />
-    <Compile Include="WinForms\FGreyscale.cs">
+    <Compile Include="WinForms\FGrayscale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\FGreyscale.Designer.cs">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <Compile Include="WinForms\FGrayscale.Designer.cs">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForms\FProxyConfig.cs">
       <SubType>Form</SubType>
@@ -765,132 +765,132 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Icons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.af.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.af.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.ar.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.ar.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.bg.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.bg.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.ca.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.ca.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.cs.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.cs.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.da.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.da.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.de.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.de.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.el.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.el.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.es.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.es.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.et.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.et.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.fa.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.fa.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.fi.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.fi.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.fr.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.fr.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.he.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.he.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.hr.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.hr.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.hu.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.hu.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.it.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.it.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.ja.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.ja.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.ko.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.ko.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.lt.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.lt.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.lv.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.lv.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.nb.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.nb.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.nl.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.nl.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.nn.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.nn.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.pl.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.pl.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.pt-BR.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.pt-BR.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.pt-PT.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.pt-PT.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.ro.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.ro.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.ru.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.ru.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.si.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.si.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.sk.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.sk.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.sl.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.sl.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.sq.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.sq.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.sr-Cyrl.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.sr-Cyrl.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.sr-Latn.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.sr-Latn.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.sv.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.sv.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.tr.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.tr.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.uk.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.uk.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.vi.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.vi.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.zh-CHS.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.zh-CHS.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\FGreyscale.zh-TW.resx">
-      <DependentUpon>FGreyscale.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\FGrayscale.zh-TW.resx">
+      <DependentUpon>FGrayscale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\FProxyConfig.af.resx" Condition="'$(Configuration)' != 'Debug'">
       <DependentUpon>FProxyConfig.cs</DependentUpon>

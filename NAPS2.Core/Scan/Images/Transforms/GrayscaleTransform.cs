@@ -7,9 +7,9 @@ namespace NAPS2.Scan.Images.Transforms
     [Serializable]
     public class GrayscaleTransform : Transform
     {
-        public float RedWeighting { get; set; } = 0.3f;
-        public float GreenWeighting { get; set; } = 0.59f;
-        public float BlueWeighting { get; set; } = 0.11f;
+        public int RedWeighting { get; set; } = 299;
+        public int GreenWeighting { get; set; } = 587;
+        public int BlueWeighting { get; set; } = 114;
 
         public override Bitmap Perform(Bitmap bitmap)
         {
@@ -18,10 +18,10 @@ namespace NAPS2.Scan.Images.Transforms
                 return bitmap;
             }
 
-            var greyScaleBitmap = UnsafeImageOps.ConvertToGrayscale(bitmap, RedWeighting, GreenWeighting, BlueWeighting);
+            var grayscaleBitmap = UnsafeImageOps.ConvertToGrayscale(bitmap, RedWeighting, GreenWeighting, BlueWeighting);
             bitmap.Dispose();
 
-            return greyScaleBitmap;
+            return grayscaleBitmap;
         }
     }
 }
