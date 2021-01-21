@@ -1060,6 +1060,7 @@ namespace NAPS2.WinForms
             ksm.Assign(ks.EmailPDFAll, tsEmailPDFAll);
             ksm.Assign(ks.EmailPDFSelected, tsEmailPDFSelected);
             ksm.Assign(ks.ImageBlackWhite, tsBlackWhite);
+            ksm.Assign(ks.ImageGrayscale, tsGrayscale);
             ksm.Assign(ks.ImageBrightness, tsBrightnessContrast);
             ksm.Assign(ks.ImageContrast, tsBrightnessContrast);
             ksm.Assign(ks.ImageCrop, tsCrop);
@@ -1505,6 +1506,18 @@ namespace NAPS2.WinForms
             if (SelectedIndices.Any())
             {
                 var form = FormFactory.Create<FBlackWhite>();
+                form.Image = SelectedImages.First();
+                form.SelectedImages = SelectedImages.ToList();
+                form.ShowDialog();
+            }
+        }
+
+
+        private void tsGreyscale_Click(object sender, EventArgs e)
+        {
+            if (SelectedIndices.Any())
+            {
+                var form = FormFactory.Create<FGreyscale>();
                 form.Image = SelectedImages.First();
                 form.SelectedImages = SelectedImages.ToList();
                 form.ShowDialog();
