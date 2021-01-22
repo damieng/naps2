@@ -49,6 +49,7 @@ namespace NAPS2.WinForms
         private readonly ScannedImageRenderer scannedImageRenderer;
         private readonly KeyboardShortcutManager ksm;
         private readonly IUserConfigManager userConfigManager;
+        private ToolStripButton tsGrayscale;
         private readonly IOperationProgress operationProgress;
 
         public FViewer(ChangeTracker changeTracker, IOperationFactory operationFactory, WinFormsExportHelper exportHelper, AppConfigManager appConfigManager, ScannedImageRenderer scannedImageRenderer, KeyboardShortcutManager ksm, IUserConfigManager userConfigManager, IOperationProgress operationProgress)
@@ -153,6 +154,7 @@ namespace NAPS2.WinForms
             this.tsBrightnessContrast = new System.Windows.Forms.ToolStripButton();
             this.tsHueSaturation = new System.Windows.Forms.ToolStripButton();
             this.tsBlackWhite = new System.Windows.Forms.ToolStripButton();
+            this.tsGrayscale = new System.Windows.Forms.ToolStripButton();
             this.tsSharpen = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSavePDF = new System.Windows.Forms.ToolStripButton();
@@ -200,6 +202,7 @@ namespace NAPS2.WinForms
             this.tsBrightnessContrast,
             this.tsHueSaturation,
             this.tsBlackWhite,
+            this.tsGrayscale,
             this.tsSharpen,
             this.toolStripSeparator3,
             this.tsSavePDF,
@@ -210,8 +213,8 @@ namespace NAPS2.WinForms
             // 
             // tbPageCurrent
             // 
-            this.tbPageCurrent.Name = "tbPageCurrent";
             resources.ApplyResources(this.tbPageCurrent, "tbPageCurrent");
+            this.tbPageCurrent.Name = "tbPageCurrent";
             this.tbPageCurrent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPageCurrent_KeyDown);
             this.tbPageCurrent.TextChanged += new System.EventHandler(this.tbPageCurrent_TextChanged);
             // 
@@ -319,6 +322,14 @@ namespace NAPS2.WinForms
             resources.ApplyResources(this.tsBlackWhite, "tsBlackWhite");
             this.tsBlackWhite.Name = "tsBlackWhite";
             this.tsBlackWhite.Click += new System.EventHandler(this.tsBlackWhite_Click);
+            // 
+            // tsGrayscale
+            // 
+            this.tsGrayscale.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsGrayscale.Image = global::NAPS2.Icons.color_gradient;
+            resources.ApplyResources(this.tsGrayscale, "tsGrayscale");
+            this.tsGrayscale.Name = "tsGrayscale";
+            this.tsGrayscale.Click += new System.EventHandler(this.tsGrayscale_Click);
             // 
             // tsSharpen
             // 
@@ -466,6 +477,14 @@ namespace NAPS2.WinForms
             await UpdateImage();
         }
 
+        private async void tsGrayscale_Click(object sender, EventArgs e)
+        {
+            var form = FormFactory.Create<FGrayscale>();
+            form.Image = ImageList.Images[ImageIndex];
+            form.ShowDialog();
+            await UpdateImage();
+        }
+
         private async void tsSharpen_Click(object sender, EventArgs e)
         {
             var form = FormFactory.Create<FSharpen>();
@@ -594,6 +613,7 @@ namespace NAPS2.WinForms
 
             ksm.Assign(ks.Delete, tsDelete);
             ksm.Assign(ks.ImageBlackWhite, tsBlackWhite);
+            ksm.Assign(ks.ImageGrayscale, tsGrayscale);
             ksm.Assign(ks.ImageBrightness, tsBrightnessContrast);
             ksm.Assign(ks.ImageContrast, tsBrightnessContrast);
             ksm.Assign(ks.ImageCrop, tsCrop);
