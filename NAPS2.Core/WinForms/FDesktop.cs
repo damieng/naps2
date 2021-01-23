@@ -1640,6 +1640,16 @@ namespace NAPS2.WinForms
             changeTracker.Made();
         }
 
+        private void tsDividedScan_Click(object sender, EventArgs e)
+        {
+            if (imageList.Images.Count < 4)
+            {
+                return;
+            }
+            UpdateThumbnails(imageList.DividedScanBooklet(SelectedIndices), true, true);
+            changeTracker.Made();
+        }
+
         #endregion
 
         #region Context Menu
@@ -2093,5 +2103,6 @@ namespace NAPS2.WinForms
         }
 
         #endregion
+
     }
 }

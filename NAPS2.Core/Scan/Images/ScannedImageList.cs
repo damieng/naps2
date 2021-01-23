@@ -265,6 +265,58 @@ namespace NAPS2.Scan.Images
             }
         }
 
+        public IEnumerable<int> DividedScanBooklet(IEnumerable<int> selection)
+        {
+            lock (this)
+            {
+                var original = Images.ToList();
+                var max = original.Count;
+                var middle = max / 2;
+
+                Images.Clear();
+                for (int i = 0; i < original.Count; ++i)
+                {
+                    Images.Add(original[GetScanIndexForDividedBookletByLogicalPage(i, max, middle)]);
+                }
+
+                RecoveryImage.Refresh(Images);
+
+                // Clear the selection (may be changed in the future to maintain it, but not necessary)
+                return Enumerable.Empty<int>();
+            }
+        }
+
+        // Divided booklet assumes you scan a folded booklet by removing the staples lower page first
+        // scanning same orientation using the "Divide scan into two pages" option to half the number of scans
+        // and give you nicer lined-up pages with less skew etc.
+        
+        // For example: An A4 physical page folded into an A5 booklet contains 8 logical pages.
+        // Using "Divide scan" we can reduce this from 8 scans to 4 scans; two for each side of the first physical page
+        // and two for each of the second but we end up with the pages in a somewhat awkward order even if we 
+        // scan consistently the same orientation and lower-page first for each side. The ordering ends up as:
+        // 8, 1, 2, 7, 6, 3, 5, 4. This function takes the final expected output page number we want and then
+        // goes and figures out where it was in the order (so finalPosition 0 through 7 returns the sequence shown).
+        private static int GetScanIndexForDividedBookletByLogicalPage(int finalPosition, int max, int middle)
+        {
+            var odd = finalPosition % 2 == 0;
+
+            // First half of the booklet counts up from first scanned page treat
+            if (finalPosition < middle)
+            {
+                var physicalPage = finalPosition / 2;
+                var index = (physicalPage * 4) + (odd ? 1 : 2);
+                return index;
+            }
+            else
+            // Second half of the booklet counts down from last scanned page and logicals 3 and 0 alternating
+            {
+                var maxPages = max / 2;
+                var physicalPage = maxPages - (finalPosition / 2) - 1;
+                var index = (physicalPage * 4) + (odd ? 3 : 0);
+                return index;
+            }
+        }
+
         public async Task RotateFlip(IEnumerable<int> selection, RotateFlipType rotateFlipType)
         {
             var images = Images.ElementsAt(selection).ToList();
