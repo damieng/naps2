@@ -70,6 +70,9 @@ namespace NAPS2.Automation
         [Option("altdeinterleave", HelpText = "Alternate Deinterleave pages before saving.")]
         public bool AltDeinterleave { get; set; }
 
+        [Option("dividedbooklet", HelpText = "Divided scan into pages booklet reorder before saving.")]
+        public bool DividedScanBooklet { get; set; }
+
         [Option("reverse", HelpText = "Reverse pages before saving.")]
         public bool Reverse { get; set; }
 
