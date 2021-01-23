@@ -97,6 +97,8 @@ namespace NAPS2.WinForms
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tsAltInterleave = new System.Windows.Forms.ToolStripMenuItem();
             this.tsAltDeinterleave = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsDividedScan = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsReverse = new System.Windows.Forms.ToolStripMenuItem();
             this.tsReverseAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,8 +109,8 @@ namespace NAPS2.WinForms
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsAbout = new System.Windows.Forms.ToolStripButton();
-            this.tsDividedScan = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ctxInvertSelection = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -185,6 +187,8 @@ namespace NAPS2.WinForms
             this.ctxView,
             this.ctxSeparator1,
             this.ctxSelectAll,
+            this.ctxInvertSelection,
+            this.toolStripMenuItem3,
             this.ctxCopy,
             this.ctxPaste,
             this.ctxSeparator2,
@@ -634,6 +638,17 @@ namespace NAPS2.WinForms
             resources.ApplyResources(this.tsAltDeinterleave, "tsAltDeinterleave");
             this.tsAltDeinterleave.Click += new System.EventHandler(this.tsAltDeinterleave_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // tsDividedScan
+            // 
+            this.tsDividedScan.Name = "tsDividedScan";
+            resources.ApplyResources(this.tsDividedScan, "tsDividedScan");
+            this.tsDividedScan.Click += new System.EventHandler(this.tsDividedScan_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -700,16 +715,16 @@ namespace NAPS2.WinForms
             this.tsAbout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.tsAbout.Click += new System.EventHandler(this.tsAbout_Click);
             // 
-            // tsDividedScan
+            // ctxInvertSelection
             // 
-            this.tsDividedScan.Name = "tsDividedScan";
-            resources.ApplyResources(this.tsDividedScan, "tsDividedScan");
-            this.tsDividedScan.Click += new System.EventHandler(this.tsDividedScan_Click);
+            this.ctxInvertSelection.Name = "ctxInvertSelection";
+            resources.ApplyResources(this.ctxInvertSelection, "ctxInvertSelection");
+            this.ctxInvertSelection.Click += new System.EventHandler(this.ctxInvertSelection_Click);
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItem3
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             // 
             // FDesktop
             // 
@@ -807,6 +822,8 @@ namespace NAPS2.WinForms
         private System.Windows.Forms.ToolStripMenuItem tsGrayscale;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tsDividedScan;
+        private System.Windows.Forms.ToolStripMenuItem ctxInvertSelection;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
     }
 }
 

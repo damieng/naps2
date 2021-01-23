@@ -827,6 +827,12 @@ namespace NAPS2.WinForms
             SelectedIndices = Enumerable.Range(0, imageList.Images.Count);
         }
 
+        private void InvertSelection()
+        {
+            var current = new HashSet<int>(SelectedIndices);
+            SelectedIndices = Enumerable.Range(0, imageList.Images.Count).Where(i => !current.Contains(i));
+        }
+
         private void MoveDown()
         {
             if (!SelectedIndices.Any())
@@ -1668,6 +1674,11 @@ namespace NAPS2.WinForms
             SelectAll();
         }
 
+        private void ctxInvertSelection_Click(object sender, EventArgs e)
+        {
+            InvertSelection();
+        }
+
         private void ctxView_Click(object sender, EventArgs e)
         {
             PreviewImage();
@@ -2103,6 +2114,5 @@ namespace NAPS2.WinForms
         }
 
         #endregion
-
     }
 }
