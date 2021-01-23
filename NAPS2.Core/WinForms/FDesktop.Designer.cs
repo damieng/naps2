@@ -107,6 +107,8 @@ namespace NAPS2.WinForms
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsAbout = new System.Windows.Forms.ToolStripButton();
+            this.tsDividedScan = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -593,6 +595,8 @@ namespace NAPS2.WinForms
             this.toolStripSeparator12,
             this.tsAltInterleave,
             this.tsAltDeinterleave,
+            this.toolStripMenuItem1,
+            this.tsDividedScan,
             this.toolStripSeparator1,
             this.tsReverse});
             this.tsdReorder.Image = global::NAPS2.Icons.arrow_refresh;
@@ -696,6 +700,17 @@ namespace NAPS2.WinForms
             this.tsAbout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.tsAbout.Click += new System.EventHandler(this.tsAbout_Click);
             // 
+            // tsDividedScan
+            // 
+            this.tsDividedScan.Name = "tsDividedScan";
+            resources.ApplyResources(this.tsDividedScan, "tsDividedScan");
+            this.tsDividedScan.Click += new System.EventHandler(this.tsDividedScan_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
             // FDesktop
             // 
             resources.ApplyResources(this, "$this");
@@ -790,6 +805,8 @@ namespace NAPS2.WinForms
         private System.Windows.Forms.ToolStripMenuItem tsHueSaturation;
         private System.Windows.Forms.ToolStripMenuItem tsBlackWhite;
         private System.Windows.Forms.ToolStripMenuItem tsGrayscale;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsDividedScan;
     }
 }
 

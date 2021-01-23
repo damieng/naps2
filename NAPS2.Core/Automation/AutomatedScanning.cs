@@ -235,7 +235,10 @@ namespace NAPS2.Automation
                 {
                     imageList.Interleave(e);
                 }
-
+                else if (options.DividedScanBooklet)
+                {
+                    imageList.DividedScanBooklet(e);
+                }
                 if (options.Reverse)
                 {
                     imageList.Reverse(e);
