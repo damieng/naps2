@@ -368,7 +368,7 @@ namespace NAPS2.Scan.Images.Transforms
             int h = bitmapData.Height;
             int w = bitmapData.Width;
 
-            var grayBitmap = new Bitmap(bitmap.Width, bitmap.Height, PixelFormat.Format24bppRgb);
+            var grayBitmap = new Bitmap(bitmap.Width, bitmap.Height, bitmap.PixelFormat);
             var grayBitmapData = grayBitmap.LockBits(new Rectangle(0, 0, grayBitmap.Width, grayBitmap.Height), ImageLockMode.WriteOnly, grayBitmap.PixelFormat);
             var graystride = Math.Abs(grayBitmapData.Stride);
             byte* grayData = (byte*)grayBitmapData.Scan0;
@@ -386,7 +386,6 @@ namespace NAPS2.Scan.Images.Transforms
                         byte b = *pixel;
                         byte g = *(pixel + 1);
                         byte r = *(pixel + 2);
-                        byte a = *(pixel + 3);
 
                         int value = ((r * redWeight) + (g * greenWeight) + (b * blueWeight)) / 1000;
                         byte gray =  value < 0 ? 0 : value > 255 ? 255 : (byte)value;
@@ -394,8 +393,8 @@ namespace NAPS2.Scan.Images.Transforms
                         *(grayData + offset) = gray;
                         *(grayData + offset + 1) = gray;
                         *(grayData + offset + 2) = gray;
-                        if (bytesPerPixel == 4)
-                            *(grayData + offset + 3) = a;
+                        if (bytesPerPixel == 4) // Alpha
+                            *(grayData + offset + 3) = *(pixel + 3);
 
                         offset += targetBytesPerPixel;
                     }
