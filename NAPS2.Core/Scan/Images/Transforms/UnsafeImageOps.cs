@@ -388,7 +388,7 @@ namespace NAPS2.Scan.Images.Transforms
                         byte r = *(pixel + 2);
 
                         int value = ((r * redWeight) + (g * greenWeight) + (b * blueWeight)) / 1000;
-                        byte gray =  value < 0 ? 0 : value > 255 ? 255 : (byte)value;
+                        byte gray = (value < 0) ? (byte)0 : (value > 255) ? (byte)255 : (byte)value;
 
                         *(grayData + offset) = gray;
                         *(grayData + offset + 1) = gray;
